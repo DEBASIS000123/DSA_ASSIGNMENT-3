@@ -8,14 +8,17 @@ public class test {
 		System.out.println("Enter the name of the student ");
 		String name=sc.next();
 		System.out.println("Enter marks ");
-		double mark=sc.nextDouble();
-		student s=new student(name,mark);
-		s.display();
 		try {
+			double mark=sc.nextDouble();
+			student s=new student(name,mark);
 			if(mark>100) {
 				throw new MarksOutOfBoundException("Mark can't be greater than 100");
 			}
-		}
+				else {
+					s.display();
+				}
+			}
+		
 		catch(Exception e) {
 			System.out.println(e);
 		}
